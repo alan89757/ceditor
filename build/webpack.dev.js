@@ -3,7 +3,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    app: "./src/app.jsx"
+    // app: "./src/app.jsx",
+    "router": "./src/myRouter/index.jsx"  // 建议hash路由
   },
   mode: "development",
   resolve: {

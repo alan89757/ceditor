@@ -20,7 +20,9 @@
   "scripts": {
     "dev": "npm run start",
     "start": "webpack-dev-server --open --config ./build/webpack.dev.js",
-    "build": "webpack --config ./build/webpack.prod.js"
+    "build": "webpack --config ./build/webpack.prod.js",
+    "build:router": "webpack --config ./src/myRouter/webpack.prod.js",
+    "build:router2": "webpack --config ./src/myRouter2/webpack.prod.js"
   },
   "repository": {
     "type": "git",

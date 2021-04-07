@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    HtmlRouter: "./src/myRouter/index.jsx"
+    HtmlRouter: "./src/myRouter2/index.js"
   },
   mode: "production",
   resolve: {
@@ -20,14 +20,14 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, "../dist"),
+    path: path.resolve(__dirname),
     filename: "[name].js",
     library: 'HtmlRouter',
     libraryTarget: 'umd'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "../src/template/index.html")
+      template: path.resolve(__dirname, "./historyRouter.html")
     })
   ]
 }

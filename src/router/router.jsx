@@ -4,7 +4,8 @@ import {
   Switch,
   Route,
   Link,
-  useRouteMatch
+  useRouteMatch,
+  NavLink
 } from "react-router-dom";
 
 
@@ -24,6 +25,11 @@ function App2() {
             </li>
             <li>
               <Link to="/contact/123">contact/id</Link>
+            </li>
+            <li>
+              <NavLink to="/react" activeClassName="hurray">
+                React
+              </NavLink>
             </li>
           </ul>
         </nav>
