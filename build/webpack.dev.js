@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    // app: "./src/app.jsx",
-    "router": "./src/myRouter/index.jsx"  // 建议hash路由
+    app: "./src/app.jsx",
+    // "router": "./src/myRouter/index.jsx"  // 建议hash路由
   },
   mode: "development",
   resolve: {
@@ -13,7 +13,8 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.resolve(__dirname, "dist"),
-    port: 8000
+    port: 9090,
+    historyApiFallback: true
   },
   module: {
     rules: [
@@ -21,6 +22,11 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: "babel-loader"
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: ["style-loader", "css-loader"]
       }
     ]
   },
