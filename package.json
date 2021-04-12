@@ -22,7 +22,8 @@
     "start": "webpack-dev-server --open --config ./build/webpack.dev.js",
     "build": "webpack --config ./build/webpack.prod.js",
     "build:router": "webpack --config ./src/myRouter/webpack.prod.js",
-    "build:router2": "webpack --config ./src/myRouter2/webpack.prod.js"
+    "build:router2": "webpack --config ./src/myRouter2/webpack.prod.js",
+    "build:dev2": "webpack-dev-server --open --config ./src/myRouter2/webpack.dev.js"
   },
   "repository": {
     "type": "git",
